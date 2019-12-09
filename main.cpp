@@ -5,18 +5,18 @@
 using namespace std;
 
 void printMenu();
-void loadDB(unique_ptr<viiroute::Route> &route);
-void addRoad(unique_ptr<viiroute::Route> &route);
-void editRoad(unique_ptr<viiroute::Route> &route);
-void deleteRoad(unique_ptr<viiroute::Route> &route);
-void findRoute(unique_ptr<viiroute::Route> &route);
+void loadDB(unique_ptr<veeroute::Route> &route);
+void addRoad(unique_ptr<veeroute::Route> &route);
+void editRoad(unique_ptr<veeroute::Route> &route);
+void deleteRoad(unique_ptr<veeroute::Route> &route);
+void findRoute(unique_ptr<veeroute::Route> &route);
 
 const std::string WARN_MSG1 = {"You should load database first "};
 const std::string WARN_MSG2 = {"There isn't such road "};
 
 int main()
 {
-    unique_ptr<viiroute::Route> route;
+    unique_ptr<veeroute::Route> route;
     int choice = -1;
 
     do
@@ -64,16 +64,16 @@ void printMenu()
     cout << "\nEnter key: ";
 }
 
-void loadDB(unique_ptr<viiroute::Route> &route)
+void loadDB(unique_ptr<veeroute::Route> &route)
 {
     cout << "Enter file path: ";
     std::string path;
     cin >> path;
 
-    route = make_unique<viiroute::Route>(path.data());
+    route = make_unique<veeroute::Route>(path.data());
 }
 
-void addRoad(unique_ptr<viiroute::Route> &route)
+void addRoad(unique_ptr<veeroute::Route> &route)
 {
     if (route)
     {
@@ -92,7 +92,7 @@ void addRoad(unique_ptr<viiroute::Route> &route)
     }
 }
 
-void editRoad(unique_ptr<viiroute::Route> &route)
+void editRoad(unique_ptr<veeroute::Route> &route)
 {
     if (route)
     {
@@ -114,7 +114,7 @@ void editRoad(unique_ptr<viiroute::Route> &route)
     }
 }
 
-void deleteRoad(unique_ptr<viiroute::Route> &route)
+void deleteRoad(unique_ptr<veeroute::Route> &route)
 {
     if (route)
     {
@@ -134,7 +134,7 @@ void deleteRoad(unique_ptr<viiroute::Route> &route)
     }
 }
 
-void findRoute(unique_ptr<viiroute::Route> &route)
+void findRoute(unique_ptr<veeroute::Route> &route)
 {
     if (route)
     {

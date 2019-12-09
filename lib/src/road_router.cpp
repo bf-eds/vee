@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <unordered_set>
 
-namespace viiroute
+namespace veeroute
 {
     RoadRouter::RoadRouter(const Roads &roads)
     {

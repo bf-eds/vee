@@ -6,7 +6,7 @@
 #include <unordered_set>
 #include <memory>
 
-namespace viiroute
+namespace veeroute
 {
     class RoadRouter
     {

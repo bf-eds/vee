@@ -8,7 +8,7 @@
 #include <cstdint>
 #include <memory>
 
-namespace viiroute
+namespace veeroute
 {
     class Route
     {

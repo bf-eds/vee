@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(viirouter)
+project(veerouter)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -8,5 +8,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_library(route SHARED lib/src/route.cpp lib/src/road_router.cpp)
 target_include_directories(route PUBLIC ${PROJECT_SOURCE_DIR} ${PROJECT_BINARY_DIR})
-add_executable(viirouter main.cpp)
-target_link_libraries(viirouter route)
+add_executable(veerouter main.cpp)
+target_link_libraries(veerouter route)
